@@ -1,30 +1,29 @@
+import { LoaderFunction, useLoaderData } from 'remix'
+
+import Header from '~/components/header'
+
+type Data = {
+  word: string
+}
+
+export const loader: LoaderFunction = async () => {
+  const data: Data = {
+    word: 'Illidan'
+  }
+
+  return data
+}
+
 export default function Index() {
+  const data = useLoaderData<Data>()
+
   return (
-    <div>
-      <h1>Welcome to Wordle of Warcraft</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer">
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer">
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <>
+      <Header />
+      <main className="flex flex-col items-center p-8">
+        <h1>Welcome to Wordle of Warcraft</h1>
+        <p>Word of the day: {data.word}</p>
+      </main>
+    </>
   )
 }
