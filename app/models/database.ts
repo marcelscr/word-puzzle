@@ -30,12 +30,17 @@ const BOSSES: { [key: string]: Boss } = {
 }
 
 export class BossesDB {
-  // We will later evolve to get a random boss base on the current day
-  getRandomBoss(): Boss {
+  // We will later evolve to get a random boss based on the current day
+  getRandom(): Boss {
     const keys = _.keys(BOSSES)
     const randomKey = _.sample(keys)!
 
     return BOSSES[randomKey]
+  }
+
+  // Returns all the bosses. We will use to filter the values on the dropdown
+  getAll(): Boss[] {
+    return _.values(BOSSES)
   }
 }
 
