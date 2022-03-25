@@ -5,7 +5,8 @@ import {
   ClassicRaids,
   BurningCrusadeDungeons,
   BurningCrusadeRaids,
-  Gender
+  Gender,
+  Type
 } from './constants'
 
 export type Location =
@@ -20,4 +21,5 @@ export type Boss = {
   instance: Instance
   location: Location
   gender: Gender
+  type: Type
 }

@@ -28,6 +28,13 @@ export enum Gender {
   AGENDER = 'AGENDER'
 }
 
+// Type
+
+export enum Type {
+  DEMON = 'DEMON',
+  ELEMENTAL = 'ELEMENTAL'
+}
+
 // Classic
 
 export enum ClassicRaids {

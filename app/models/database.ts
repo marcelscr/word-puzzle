@@ -6,7 +6,8 @@ import {
   BurningCrusadeDungeons,
   ClassicRaids,
   Instance,
-  Gender
+  Gender,
+  Type
 } from './constants'
 
 const BOSSES: { [key: string]: Boss } = {
@@ -15,18 +16,21 @@ const BOSSES: { [key: string]: Boss } = {
     expansion: Expansion.CLASSIC,
     instance: Instance.RAID,
     location: ClassicRaids.MOLTEN_CORE,
-    gender: Gender.AGENDER
+    gender: Gender.AGENDER,
+    type: Type.ELEMENTAL
   },
   BURNING_CRUSADE_DUNGEON_HELLFIRE_RAMPARTS_OMOR: {
     name: 'Omor the Unscarred',
     expansion: Expansion.BURNING_CRUSADE,
     instance: Instance.DUNGEON,
     location: BurningCrusadeDungeons.HELLFIRE_RAMPARTS,
-    gender: Gender.MALE
+    gender: Gender.MALE,
+    type: Type.DEMON
   }
 }
 
 export class BossesDB {
+  // We will later evolve to get a random boss base on the current day
   getRandomBoss(): Boss {
     const keys = _.keys(BOSSES)
     const randomKey = _.sample(keys)!
