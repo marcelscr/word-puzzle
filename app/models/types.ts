@@ -1,6 +1,6 @@
 import {
   Expansion,
-  Instance,
+  LocationType,
   ClassicDungeons,
   ClassicRaids,
   BurningCrusadeDungeons,
@@ -18,7 +18,7 @@ export type Location =
 export type Boss = {
   name: string
   expansion: Expansion
-  instance: Instance
+  locationType: LocationType
   location: Location
   gender: Gender
   type: Type

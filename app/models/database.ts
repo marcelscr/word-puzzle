@@ -5,7 +5,7 @@ import {
   Expansion,
   BurningCrusadeDungeons,
   ClassicRaids,
-  Instance,
+  LocationType,
   Gender,
   Type
 } from './constants'
@@ -14,7 +14,7 @@ const BOSSES: { [key: string]: Boss } = {
   CLASSIC_RAID_MOLTEN_CORE_RAGNAROS: {
     name: 'Ragnaros (Classic)',
     expansion: Expansion.CLASSIC,
-    instance: Instance.RAID,
+    locationType: LocationType.RAID,
     location: ClassicRaids.MOLTEN_CORE,
     gender: Gender.AGENDER,
     type: Type.ELEMENTAL
@@ -22,7 +22,7 @@ const BOSSES: { [key: string]: Boss } = {
   BURNING_CRUSADE_DUNGEON_HELLFIRE_RAMPARTS_OMOR: {
     name: 'Omor the Unscarred',
     expansion: Expansion.BURNING_CRUSADE,
-    instance: Instance.DUNGEON,
+    locationType: LocationType.DUNGEON,
     location: BurningCrusadeDungeons.HELLFIRE_RAMPARTS,
     gender: Gender.MALE,
     type: Type.DEMON

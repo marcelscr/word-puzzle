@@ -12,9 +12,9 @@ export enum Expansion {
   SHADOWLANDS = 'SHADOWLANDS'
 }
 
-// Instance
+// LocationType
 
-export enum Instance {
+export enum LocationType {
   DUNGEON = 'DUNGEON',
   RAID = 'RAID',
   WORLD = 'WORLD'
