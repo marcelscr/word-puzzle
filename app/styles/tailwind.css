@@ -468,8 +468,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.fixed {
+  position: fixed;
 }
 
 .flex {
