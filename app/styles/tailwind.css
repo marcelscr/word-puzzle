@@ -468,10 +468,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .flex {
   display: flex;
 }
@@ -501,6 +497,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-8 {
   padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-white {
