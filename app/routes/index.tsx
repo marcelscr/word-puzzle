@@ -32,7 +32,7 @@ export default function Index() {
           <p>Boss of the day: {JSON.stringify(data.boss, null, 2)}</p>
         </section>
 
-        <section>
+        <section className="text-center">
           <p>All bosses:</p>
           <ul>
             {_.map(data.options, boss => {
