@@ -1,4 +1,6 @@
 import _ from 'lodash'
+import seedrandom from 'seedrandom'
+import moment from 'moment'
 
 import type { Boss } from './types'
 import {
@@ -30,10 +32,11 @@ const BOSSES: { [key: string]: Boss } = {
 }
 
 export class BossesDB {
-  // We will later evolve to get a random boss based on the current day
   getRandom(): Boss {
+    // Select a fixed value based on the current date
+    const rng = seedrandom(moment().format('YYYY-MM-DD'))
     const keys = _.keys(BOSSES)
-    const randomKey = _.sample(keys)!
+    const randomKey = keys[rng.int32() % keys.length]
 
     return BOSSES[randomKey]
   }
