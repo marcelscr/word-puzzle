@@ -3,8 +3,8 @@ import { useLoaderData } from '@remix-run/react'
 import _ from 'lodash'
 
 import Header from '~/components/header'
-import type { Boss } from '~/models/types'
-import BossesDB from '~/models/database'
+import type { Boss } from '~/data/types'
+import BossesDB from '~/data/database'
 
 type Data = {
   boss: Boss
