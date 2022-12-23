@@ -3,31 +3,32 @@ import seedrandom from 'seedrandom'
 import moment from 'moment'
 
 import type { Boss } from './types'
-import {
-  Expansion,
-  BurningCrusadeDungeons,
-  ClassicRaids,
-  LocationType,
-  Gender,
-  Type
-} from './constants'
+import * as Constants from './constants'
 
 const BOSSES: { [key: string]: Boss } = {
   CLASSIC_RAID_MOLTEN_CORE_RAGNAROS: {
     name: 'Ragnaros (Classic)',
-    expansion: Expansion.CLASSIC,
-    locationType: LocationType.RAID,
-    location: ClassicRaids.MOLTEN_CORE,
-    gender: Gender.AGENDER,
-    type: Type.ELEMENTAL
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.MOLTEN_CORE,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.ELEMENTAL
   },
-  BURNING_CRUSADE_DUNGEON_HELLFIRE_RAMPARTS_OMOR: {
+  TBC_DUNGEON_HELLFIRE_RAMPARTS_OMOR: {
     name: 'Omor the Unscarred',
-    expansion: Expansion.BURNING_CRUSADE,
-    locationType: LocationType.DUNGEON,
-    location: BurningCrusadeDungeons.HELLFIRE_RAMPARTS,
-    gender: Gender.MALE,
-    type: Type.DEMON
+    expansion: Constants.Expansion.BURNING_CRUSADE,
+    locationType: Constants.LocationType.DUNGEON,
+    location: Constants.BurningCrusadeDungeons.HELLFIRE_RAMPARTS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.DEMON
+  },
+  WOTLK_RAID_ULDUAR_YOGG_SARON: {
+    name: 'Yogg-Saron',
+    expansion: Constants.Expansion.WRATH_OF_THE_LICH_KING,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.LichKingRaids.ULDUAR,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.ABERRATION
   }
 }
 

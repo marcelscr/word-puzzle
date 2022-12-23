@@ -1,25 +1,18 @@
-import {
-  Expansion,
-  LocationType,
-  ClassicDungeons,
-  ClassicRaids,
-  BurningCrusadeDungeons,
-  BurningCrusadeRaids,
-  Gender,
-  Type
-} from './constants'
+import * as Constants from './constants'
 
 export type Location =
-  | ClassicDungeons
-  | ClassicRaids
-  | BurningCrusadeDungeons
-  | BurningCrusadeRaids
+  | Constants.ClassicDungeons
+  | Constants.ClassicRaids
+  | Constants.BurningCrusadeDungeons
+  | Constants.BurningCrusadeRaids
+  | Constants.LichKingDungeons
+  | Constants.LichKingRaids
 
 export type Boss = {
   name: string
-  expansion: Expansion
-  locationType: LocationType
+  expansion: Constants.Expansion
+  locationType: Constants.LocationType
   location: Location
-  gender: Gender
-  type: Type
+  gender: Constants.Gender
+  type: Constants.Type
 }

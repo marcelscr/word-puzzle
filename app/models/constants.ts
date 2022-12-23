@@ -31,6 +31,7 @@ export enum Gender {
 // Type
 
 export enum Type {
+  ABERRATION = 'ABERRATION',
   DEMON = 'DEMON',
   ELEMENTAL = 'ELEMENTAL'
 }
@@ -60,5 +61,18 @@ export enum BurningCrusadeRaids {
 export enum BurningCrusadeDungeons {
   HELLFIRE_RAMPARTS = 'HELLFIRE_RAMPARTS',
   THE_BLOOD_FURNACE = 'THE_BLOOD_FURNACE'
+  // TODO: Add other dungeons
+}
+
+// Wrath of the Lick Ling
+
+export enum LichKingRaids {
+  NAXXRAMAS = 'NAXXRAMAS',
+  ULDUAR = 'ULDUAR'
+  // TODO: Add other raids
+}
+
+export enum LichKingDungeons {
+  HALLS_OF_STONE = 'HALLS_OF_STONE'
   // TODO: Add other dungeons
 }
