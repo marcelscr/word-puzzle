@@ -51,38 +51,31 @@ export enum ClassicRaids {
 
 export enum ClassicDungeons {
   RAGEFIRE_CHASM = 'RAGEFIRE_CHASM',
-  WAILING_CAVERNS = 'WAILING_CAVERNS'
-  // TODO: Add other dungeons
+  WAILING_CAVERNS = 'WAILING_CAVERNS',
+  THE_DEADMINES = 'THE_DEADMINES',
+  SHADOWFANG_KEEP = 'SHADOWFANG_KEEP',
+  THE_STOCKADE = 'THE_STOCKADE',
+  BLACKFATHOM_DEEPS = 'BLACKFATHOM_DEEPS',
+  GNOMEREGAN = 'GNOMEREGAN',
+  RAZORFEN_KRAUL = 'RAZORFEN_KRAUL',
+  SCARLET_MONASTERY_GRAVEYARD = 'SCARLET_MONASTERY_GRAVEYARD',
+  SCARLET_MONASTERY_LIBRARY = 'SCARLET_MONASTERY_LIBRARY',
+  SCARLET_MONASTERY_ARMORY = 'SCARLET_MONASTERY_ARMORY',
+  SCARLET_MONASTERY_CATHEDRAL = 'SCARLET_MONASTERY_CATHEDRAL',
+  RAZORFEN_DOWNS = 'RAZORFEN_DOWNS',
+  ULDAMAN = 'ULDAMAN',
+  ZUL_FARRAK = 'ZUL_FARRAK',
+  MARAUDON_WICKED_GROTTO = 'MARAUDON_WICKED_GROTTO',
+  MARAUDON_FOULSPORE_CAVERN = 'MARAUDON_FOULSPORE_CAVERN',
+  MARAUDON_EARTH_SONG_FALLS = 'MARAUDON_EARTH_SONG_FALLS',
+  THE_TEMPLE_OF_ATAL_HAKKAR = 'THE_TEMPLE_OF_ATAL_HAKKAR',
+  BLACKROCK_DEPTHS = 'BLACKROCK_DEPTHS',
+  LOWER_BLACKROCK_SPIRE = 'LOWER_BLACKROCK_SPIRE',
+  UPPER_BLACKROCK_SPIRE = 'UPPER_BLACKROCK_SPIRE',
+  SCHOLOMANCE = 'SCHOLOMANCE',
+  STRATHOLME = 'STRATHOLME',
+  DIRE_MAUL = 'DIRE_MAUL'
 }
-
-// Ragefire Chasm - 13-18
-// Wailing Caverns - 15-25
-// The Deadmines - 18-23
-// Shadowfang Keep - 22-30
-// The Stockade - 22-30
-// Blackfathom Deeps - 24-32
-// Gnomeregan - 29-38
-// Razorfen Kraul - 30-40
-// Scarlet Monastery - 26-45
-// Graveyard: 28-38
-// Library: 29-39
-// Armory: 32-42
-// Cathedral: 35-45
-// Razorfen Downs - 40-50
-// Uldaman - 42-52
-// Zul'Farrak - 44-54
-// Maraudon - 46-55
-// Wicked Grotto (Purple): 45-53
-// Foulspore Cavern (Orange): 45-53
-// Earth Song Falls (Inner): 48-57
-// The Temple of Atal'Hakkar - 50-60
-// Blackrock Depths - 52-60
-// Blackrock Spire - 55-60
-// Lower: 55-60
-// Upper: 58-60
-// Scholomance - 58-60
-// Stratholme - 58-60
-// Dire Maul - 58-60
 
 // Burning Crusade
 
@@ -100,26 +93,22 @@ export enum BurningCrusadeRaids {
 
 export enum BurningCrusadeDungeons {
   HELLFIRE_RAMPARTS = 'HELLFIRE_RAMPARTS',
-  THE_BLOOD_FURNACE = 'THE_BLOOD_FURNACE'
-  // TODO: Add other dungeons
+  THE_BLOOD_FURNACE = 'THE_BLOOD_FURNACE',
+  THE_SLAVE_PENS = 'THE_SLAVE_PENS',
+  THE_UNDERBOG = 'THE_UNDERBOG',
+  MANA_TOMBS = 'MANA_TOMBS',
+  AUCHENAI_CRYPTS = 'AUCHENAI_CRYPTS',
+  OLD_HILLSBRAD_FOOTHILLS = 'OLD_HILLSBRAD_FOOTHILLS',
+  SETHEKK_HALLS = 'SETHEKK_HALLS',
+  THE_STEAMVAULT = 'THE_STEAMVAULT',
+  SHADOW_LABYRINTH = 'SHADOW_LABYRINTH',
+  THE_SHATTERED_HALLS = 'THE_SHATTERED_HALLS',
+  THE_BLACK_MORASS = 'THE_BLACK_MORASS',
+  THE_BOTANICA = 'THE_BOTANICA',
+  THE_MECHANAR = 'THE_MECHANAR',
+  THE_ARCATRAZ = 'THE_ARCATRAZ',
+  MAGISTERS_TERRACE = 'MAGISTERS_TERRACE'
 }
-
-// Hellfire Citadel: Hellfire Ramparts - 60-62
-// Hellfire Citadel: The Blood Furnace - 61-63
-// Coilfang Reservoir: The Slave Pens - 62-64
-// Coilfang Reservoir: The Underbog - 63-65
-// Auchindoun: Mana-Tombs - 64-66
-// Auchindoun: Auchenai Crypts - 65-67
-// Caverns of Time: Old Hillsbrad Foothills - 66-68
-// Auchindoun: Sethekk Halls - 67-69
-// Coilfang Reservoir: The Steamvault - 68-70
-// Auchindoun: Shadow Labyrinth - 69-70
-// Hellfire Citadel: The Shattered Halls - 69-70
-// Caverns of Time: The Black Morass - 70
-// Tempest Keep: The Botanica - 70
-// Tempest Keep: The Mechanar - 70
-// Tempest Keep: The Arcatraz - 70
-// Magisters' Terrace - 70
 
 // Wrath of the Lick Ling
 
@@ -136,26 +125,23 @@ export enum LichKingRaids {
 }
 
 export enum LichKingDungeons {
-  HALLS_OF_STONE = 'HALLS_OF_STONE'
-  // TODO: Add other dungeons
+  AHN_KAHET_THE_OLD_KINGDOM = 'AHN_KAHET_THE_OLD_KINGDOM',
+  AZJOL_NERUB = 'AZJOL_NERUB',
+  DRAK_THARON_KEEP = 'DRAK_THARON_KEEP',
+  GUNDRAK = 'GUNDRAK',
+  HALLS_OF_LIGHTNING = 'HALLS_OF_LIGHTNING',
+  HALLS_OF_REFLECTION = 'HALLS_OF_REFLECTION',
+  HALLS_OF_STONE = 'HALLS_OF_STONE',
+  PIT_OF_SARON = 'PIT_OF_SARON',
+  THE_CULLING_OF_STRATHOLME = 'THE_CULLING_OF_STRATHOLME',
+  THE_FORGE_OF_SOULS = 'THE_FORGE_OF_SOULS',
+  THE_NEXUS = 'THE_NEXUS',
+  THE_OCULUS = 'THE_OCULUS',
+  THE_VIOLET_HOLD = 'THE_VIOLET_HOLD',
+  TRIAL_OF_THE_CHAMPION = 'TRIAL_OF_THE_CHAMPION',
+  UTGARDE_KEEP = 'UTGARDE_KEEP',
+  UTGARDE_PINNACLE = 'UTGARDE_PINNACLE'
 }
-
-// 	Ahn'kahet: The Old Kingdom
-// 2	Azjol-Nerub
-// 3	Drak'Tharon Keep
-// 4	Gundrak
-// 5	Halls of Lightning
-// 6	Halls of Reflection
-// 7	Halls of Stone
-// 8	Pit of Saron
-// 9	The Culling of Stratholme
-// 10	The Forge of Souls
-// 11	The Nexus
-// 12	The Oculus
-// 13	The Violet Hold
-// 14	Trial of the Champion
-// 15	Utgarde Keep
-// 16	Utgarde Pinnacle
 
 export enum CataclysmRaids {
   BARADIN_HOLD = 'BARADIN_HOLD',
@@ -167,24 +153,21 @@ export enum CataclysmRaids {
 }
 
 export enum CataclysmDungeons {
-  BLACKROCK_CAVERNS = 'BLACKROCK_CAVERNS'
-  // TODO: Add other dungeons
+  BLACKROCK_CAVERNS = 'BLACKROCK_CAVERNS',
+  DEADMINES = 'DEADMINES',
+  END_TIME = 'END_TIME',
+  GRIM_BATOL = 'GRIM_BATOL',
+  HALLS_OF_ORIGINATION = 'HALLS_OF_ORIGINATION',
+  HOUR_OF_TWILIGHT = 'HOUR_OF_TWILIGHT',
+  LOST_CITY_OF_THE_TOL_VIR = 'LOST_CITY_OF_THE_TOL_VIR',
+  SHADOWFANG_KEEP = 'SHADOWFANG_KEEP',
+  THE_STONECORE = 'THE_STONECORE',
+  THE_VORTEX_PINNACLE = 'THE_VORTEX_PINNACLE',
+  THRONE_OF_THE_TIDES = 'THRONE_OF_THE_TIDES',
+  WELL_OF_ETERNITY = 'WELL_OF_ETERNITY',
+  ZUL_AMAN = 'ZUL_AMAN',
+  ZUL_GURUB = 'ZUL_GURUB'
 }
-
-// 1	Blackrock Caverns
-// 2	Deadmines
-// 3	End Time
-// 4	Grim Batol
-// 5	Halls of Origination
-// 6	Hour of Twilight
-// 7	Lost City of the Tol'vir
-// 8	Shadowfang Keep
-// 9	The Stonecore
-// 10	The Vortex Pinnacle
-// 11	Throne of the Tides
-// 12	Well of Eternity
-// 13	Zul'Aman
-// 14	Zul'Gurub
 
 export enum PandariaRaids {
   MOGU_SHAN_VAULTS = 'MOGUSHAN_VAULTS',
@@ -195,16 +178,13 @@ export enum PandariaRaids {
 }
 
 export enum PandariaDungeons {
-  GATE_OF_THE_SETTING_SUN = 'GATE_OF_THE_SETTING_SUN'
-  // TODO: Add other dungeons
+  GATE_OF_THE_SETTING_SUN = 'GATE_OF_THE_SETTING_SUN',
+  TEMPLE_OF_THE_JADE_SERPENT = 'TEMPLE_OF_THE_JADE_SERPENT',
+  STORMSTOUT_BREWERY = 'STORMSTOUT_BREWERY',
+  MOGU_SHAN_PALACE = 'MOGU_SHAN_PALACE',
+  SHADO_PAN_MONASTERY = 'SHADO_PAN_MONASTERY',
+  SIEGE_OF_NIUZAO_TEMPLE = 'SIEGE_OF_NIUZAO_TEMPLE'
 }
-
-// Gate of the Setting Sun
-// Temple of the Jade Serpent
-// Stormstout Brewery
-// Mogu'shan Palace
-// Shado-Pan Monastery
-// Siege of Niuzao Temple
 
 export enum WarlordsRaids {
   HIGHMAUL = 'HIGHMAUL',
@@ -213,18 +193,15 @@ export enum WarlordsRaids {
 }
 
 export enum WarlordsDungeons {
-  AUCHINDOUN = 'AUCHINDOUN'
-  // TODO: Add other dungeons
+  AUCHINDOUN = 'AUCHINDOUN',
+  BLOODMAUL_SLAG_MINES = 'BLOODMAUL_SLAG_MINES',
+  THE_EVERBLOOM = 'THE_EVERBLOOM',
+  GRIMRAIL_DEPOT = 'GRIMRAIL_DEPOT',
+  IRON_DOCKS = 'IRON_DOCKS',
+  SHADOWMOON_BURIAL_GROUNDS = 'SHADOWMOON_BURIAL_GROUNDS',
+  SKYREACH = 'SKYREACH',
+  UPPER_BLACKROCK_SPIRE = 'UPPER_BLACKROCK_SPIRE'
 }
-
-// Auchindoun
-// Bloodmaul Slag Mines
-// The Everbloom
-// Grimrail Depot
-// Iron Docks
-// Shadowmoon Burial Grounds
-// Skyreach
-// Upper Blackrock Spire
 
 export enum LegionRaids {
   THE_EMERALD_NIGHTMARE = 'THE_EMERALD_NIGHTMARE',
@@ -235,23 +212,20 @@ export enum LegionRaids {
 }
 
 export enum LegionDungeons {
-  ASSAULT_ON_VIOLET_HOLD = 'ASSAULT_ON_VIOLET_HOLD'
-  // TODO: Add other dungeons
+  ASSAULT_ON_VIOLET_HOLD = 'ASSAULT_ON_VIOLET_HOLD',
+  BLACK_ROOK_HOLD = 'BLACK_ROOK_HOLD',
+  CATHEDRAL_OF_ETERNAL_NIGHT = 'CATHEDRAL_OF_ETERNAL_NIGHT',
+  COURT_OF_STARS = 'COURT_OF_STARS',
+  DARKHEART_THICKET = 'DARKHEART_THICKET',
+  EYE_OF_AZSHARA = 'EYE_OF_AZSHARA',
+  HALLS_OF_VALOR = 'HALLS_OF_VALOR',
+  MAW_OF_SOULS = 'MAW_OF_SOULS',
+  NELTHARIONS_LAIR = 'NELTHARIONS_LAIR',
+  RETURN_TO_KARAZHAN = 'RETURN_TO_KARAZHAN',
+  SEAT_OF_THE_TRIUMVIRATE = 'SEAT_OF_THE_TRIUMVIRATE',
+  THE_ARCWAY = 'THE_ARCWAY',
+  VAULT_OF_THE_WARDENS = 'VAULT_OF_THE_WARDENS'
 }
-
-// 1	Assault on Violet Hold
-// 2	Black Rook Hold
-// 3	Cathedral of Eternal Night
-// 4	Court of Stars
-// 5	Darkheart Thicket
-// 6	Eye of Azshara
-// 7	Halls of Valor
-// 8	Maw of Souls
-// 9	Neltharion's Lair
-// 10	Return to Karazhan
-// 11	Seat of the Triumvirate
-// 12	The Arcway
-// 13	Vault of the Wardens
 
 export enum BattleForAzerothRaids {
   ULDIR = 'ULDIR',
@@ -262,21 +236,18 @@ export enum BattleForAzerothRaids {
 }
 
 export enum BattleForAzerothDungeons {
-  ATAL_DAZAR = 'ATAL_DAZAR'
-  // TODO: Add other dungeons
+  ATAL_DAZAR = 'ATAL_DAZAR',
+  FREEHOLD = 'FREEHOLD',
+  KINGS_REST = 'KINGS_REST',
+  OPERATION_MECHAGON = 'OPERATION_MECHAGON',
+  SHRINE_OF_THE_STORM = 'SHRINE_OF_THE_STORM',
+  SIEGE_OF_BORALUS = 'SIEGE_OF_BORALUS',
+  TEMPLE_OF_SETHRALISS = 'TEMPLE_OF_SETHRALISS',
+  THE_MOTHERLODE = 'THE_MOTHERLODE',
+  THE_UNDERROT = 'THE_UNDERROT',
+  TOL_DAGOR = 'TOL_DAGOR',
+  WAYCREST_MANOR = 'WAYCREST_MANOR'
 }
-
-// Atal'Dazar
-// Freehold
-// King's Rest
-// Operation: Mechagon
-// Shrine of the Storm
-// Siege of Boralus
-// Temple of Sethraliss
-// The MOTHERLODE!!!
-// The Underrot
-// Tol Dagor
-// Waycrest Manor
 
 export enum ShadowlandsRaids {
   CASTLE_NATHRIA = 'CASTLE_NATHRIA',
@@ -285,33 +256,27 @@ export enum ShadowlandsRaids {
 }
 
 export enum ShadowlandsDungeons {
-  THE_NECROTIC_WAKE = 'THE_NECROTIC_WAKE'
-  // TODO: Add other dungeons
+  THE_NECROTIC_WAKE = 'THE_NECROTIC_WAKE',
+  PLAGUEFALL = 'PLAGUEFALL',
+  MISTS_OF_TIRNA_SCITHE = 'MISTS_OF_TIRNA_SCITHE',
+  HALLS_OF_ATONEMENT = 'HALLS_OF_ATONEMENT',
+  DE_OTHER_SIDE = 'DE_OTHER_SIDE',
+  SANGUINE_DEPTHS = 'SANGUINE_DEPTHS',
+  SPIRES_OF_ASCENSION = 'SPIRES_OF_ASCENSION',
+  THEATER_OF_PAIN = 'THEATER_OF_PAIN'
 }
-
-// 1.1. The Necrotic Wake.
-// 1.1. Plaguefall.
-// 1.1. Mists of Tirna Scithe.
-// 1.1. Halls of Atonement.
-// 1.2. De Other Side.
-// 1.2. Sanguine Depths.
-// 1.2. Spires of Ascension.
-// 1.2. Theater of Pain.
 
 export enum DragonflightRaids {
   VAULT_OF_THE_INCARNATES = 'VAULT_OF_THE_INCARNATES'
 }
 
 export enum DragonflightDungeons {
-  GATE_OF_THE_SETTING_SUN = 'GATE_OF_THE_SETTING_SUN'
-  // TODO: Add other dungeons
+  ALGETHAR_ACADEMY = 'ALGETHAR_ACADEMY',
+  BRACKENHIDE_HOLLOW = 'BRACKENHIDE_HOLLOW',
+  HALLS_OF_INFUSION = 'HALLS_OF_INFUSION',
+  NELTHARUS = 'NELTHARUS',
+  RUBY_LIFE_POOLS = 'RUBY_LIFE_POOLS',
+  THE_AZURE_VAULT = 'THE_AZURE_VAULT',
+  THE_NOKHUD_OFFENSIVE = 'THE_NOKHUD_OFFENSIVE',
+  ULDAMAN_LEGACY_OF_TYR = 'ULDAMAN_LEGACY_OF_TYR'
 }
-
-// Algeth'ar Academy
-// Brackenhide Hollow
-// Halls of Infusion
-// Neltharus
-// Ruby Life Pools
-// The Azure Vault
-// The Nokhud Offensive
-// Uldaman: Legacy of Tyr
