@@ -37,7 +37,7 @@ export class BossesDB {
     // Select a fixed value based on the current date
     const rng = seedrandom(moment().format('YYYY-MM-DD'))
     const keys = _.keys(BOSSES)
-    const randomKey = keys[rng.int32() % keys.length]
+    const randomKey = keys[Math.abs(rng.int32()) % keys.length]
 
     return BOSSES[randomKey]
   }
