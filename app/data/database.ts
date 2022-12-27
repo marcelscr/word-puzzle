@@ -39,7 +39,7 @@ const BOSSES: { [key: string]: Boss } = {
 }
 
 export class BossesDB {
-  getRandom(): Boss {
+  getDailyBoss(): Boss {
     // Select a fixed value based on the current date
     const rng = seedrandom(moment().format('YYYY-MM-DD'))
     const keys = _.keys(BOSSES)
