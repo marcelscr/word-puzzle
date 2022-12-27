@@ -5,9 +5,13 @@ import moment from 'moment'
 import type { Boss } from './types'
 import * as Constants from './constants'
 
+const bossImageUrl = (displayId: string) =>
+  `https://render.worldofwarcraft.com/us/npcs/zoom/creature-display-${displayId}.jpg`
+
 const BOSSES: { [key: string]: Boss } = {
   CLASSIC_RAID_MOLTEN_CORE_RAGNAROS: {
     name: 'Ragnaros (Classic)',
+    imageUrl: bossImageUrl('11121'),
     expansion: Constants.Expansion.CLASSIC,
     locationType: Constants.LocationType.RAID,
     location: Constants.ClassicRaids.MOLTEN_CORE,
@@ -16,6 +20,7 @@ const BOSSES: { [key: string]: Boss } = {
   },
   TBC_DUNGEON_HELLFIRE_RAMPARTS_OMOR: {
     name: 'Omor the Unscarred',
+    imageUrl: bossImageUrl('18237'),
     expansion: Constants.Expansion.BURNING_CRUSADE,
     locationType: Constants.LocationType.DUNGEON,
     location: Constants.BurningCrusadeDungeons.HELLFIRE_RAMPARTS,
@@ -24,6 +29,7 @@ const BOSSES: { [key: string]: Boss } = {
   },
   WOTLK_RAID_ULDUAR_YOGG_SARON: {
     name: 'Yogg-Saron',
+    imageUrl: bossImageUrl('28817'),
     expansion: Constants.Expansion.WRATH_OF_THE_LICH_KING,
     locationType: Constants.LocationType.RAID,
     location: Constants.LichKingRaids.ULDUAR,

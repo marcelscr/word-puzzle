@@ -28,6 +28,7 @@ export type Location = DungeonLocations | RaidLocations
 
 export type Boss = {
   name: string
+  imageUrl: string
   expansion: Constants.Expansion
   locationType: Constants.LocationType
   location: Location
