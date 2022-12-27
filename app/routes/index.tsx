@@ -55,7 +55,11 @@ export default function Index() {
         <h1>Welcome to Wordle of Warcraft</h1>
 
         <section>
-          <p>Boss of the day: {JSON.stringify(data.boss, null, 2)}</p>
+          <img
+            src={data.boss.imageUrl}
+            alt="boss"
+            className="max-h-[400px] blur-md"
+          />
         </section>
 
         <section className="text-center">
