@@ -52,6 +52,11 @@ export class BossesDB {
   getAll(): Boss[] {
     return _.values(BOSSES)
   }
+
+  // Returns the boss that has the choses name
+  getByName(name: string): Boss | undefined {
+    return _.find(BOSSES, { name })
+  }
 }
 
 const bossesDB = new BossesDB()
