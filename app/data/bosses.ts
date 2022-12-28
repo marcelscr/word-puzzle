@@ -15,6 +15,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.FLAMEWALKER,
     position: 1
   },
   {
@@ -25,6 +26,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.CORE_HOUND,
     position: 2
   },
   {
@@ -35,6 +37,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.FLAMEWALKER,
     position: 3
   },
   {
@@ -45,6 +48,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.ELEMENTAL,
+    subType: Constants.SubType.LAVA_ELEMENTAL,
     position: 4
   },
   {
@@ -55,6 +59,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.FLAMEWALKER,
     position: 5
   },
   {
@@ -65,6 +70,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.ELEMENTAL,
+    subType: Constants.SubType.FIRE_ELEMENTAL,
     position: 6
   },
   {
@@ -75,6 +81,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.GIANT,
+    subType: Constants.SubType.MOLTEN_GIANT,
     position: 7
   },
   {
@@ -85,6 +92,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.FLAMEWALKER,
     position: 8
   },
   {
@@ -95,6 +103,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.FLAMEWALKER,
     position: 9
   },
   {
@@ -105,6 +114,7 @@ const MoltenCoreBosses: Boss[] = [
     location: Constants.ClassicRaids.MOLTEN_CORE,
     gender: Constants.Gender.MALE,
     type: Constants.Type.ELEMENTAL,
+    subType: Constants.SubType.FIRE_ELEMENTAL,
     position: 10
   }
 ]
@@ -118,6 +128,7 @@ const OnyxiasLairBosses: Boss[] = [
     location: Constants.ClassicRaids.ONYXIAS_LAIR,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.BLACK_WYRM,
     position: 1
   }
 ]
@@ -131,6 +142,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.MALE,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.DRAGONSPAWN,
     position: 1
   },
   {
@@ -141,6 +153,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.MALE,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.RED_DRAGON,
     position: 2
   },
   {
@@ -151,6 +164,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.MALE,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.DRAKONID,
     position: 3
   },
   {
@@ -161,6 +175,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.BLACK_DRAKE,
     position: 4
   },
   {
@@ -171,6 +186,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.BLACK_DRAKE,
     position: 5
   },
   {
@@ -181,6 +197,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.BLACK_DRAKE,
     position: 6
   },
   {
@@ -191,6 +208,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.DRAKEADON,
     position: 7
   },
   {
@@ -201,6 +219,7 @@ const BlackwingLairBosses: Boss[] = [
     location: Constants.ClassicRaids.BLACKWING_LAIR,
     gender: Constants.Gender.MALE,
     type: Constants.Type.DRAGONKIN,
+    subType: Constants.SubType.BLACK_DRAGON,
     position: 8
   }
 ]
@@ -214,6 +233,7 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.ZANDALARI_TROLL,
     position: 1
   },
   {
@@ -224,6 +244,7 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.ZANDALARI_TROLL,
     position: 2
   },
   {
@@ -234,6 +255,7 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.JUNGLE_TROLL,
     position: 3
   },
   {
@@ -244,6 +266,7 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.ZANDALARI_TROLL,
     position: 4
   },
   {
@@ -254,6 +277,7 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.ZANDALARI_TROLL,
     position: 5
   },
   {
@@ -264,160 +288,8 @@ const ZulGurubBosses: Boss[] = [
     location: Constants.ClassicRaids.ZUL_GURUB,
     gender: Constants.Gender.MALE,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.LOA,
     position: 6
-  }
-]
-
-const NaxxramasBosses: Boss[] = [
-  {
-    name: "Anub'Rekhan",
-    imageUrl: bossImageUrl('15931'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 1
-  },
-  {
-    name: 'Grand Widow Faerlina',
-    imageUrl: bossImageUrl('15940'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.FEMALE,
-    type: Constants.Type.HUMANOID,
-    position: 2
-  },
-  {
-    name: 'Maexxna',
-    imageUrl: bossImageUrl('15928'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.FEMALE,
-    type: Constants.Type.BEAST,
-    position: 3
-  },
-  {
-    name: 'Noth the Plaguebringer',
-    imageUrl: bossImageUrl('16590'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 4
-  },
-  {
-    name: 'Heigan the Unclean',
-    imageUrl: bossImageUrl('16309'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 5
-  },
-  {
-    name: 'Loatheb',
-    imageUrl: bossImageUrl('16110'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 6
-  },
-  {
-    name: 'Instructor Razuvious',
-    imageUrl: bossImageUrl('16582'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 7
-  },
-  {
-    name: 'Gothik the Harvester',
-    imageUrl: bossImageUrl('16279'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 8
-  },
-  {
-    name: 'The Four Horsemen',
-    imageUrl: bossImageUrl('16139'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MANY,
-    type: Constants.Type.UNDEAD,
-    position: 9
-  },
-  {
-    name: 'Patchwerk',
-    imageUrl: bossImageUrl('16174'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 10
-  },
-  {
-    name: 'Grobbulus',
-    imageUrl: bossImageUrl('16035'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 11
-  },
-  {
-    name: 'Gluth',
-    imageUrl: bossImageUrl('16064'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 12
-  },
-  {
-    name: 'Thaddius',
-    imageUrl: bossImageUrl('16137'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.AGENDER,
-    type: Constants.Type.UNDEAD,
-    position: 13
-  },
-  {
-    name: 'Sapphiron',
-    imageUrl: bossImageUrl('16033'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 14
-  },
-  {
-    name: "Kel'thuzard",
-    imageUrl: bossImageUrl('15945'),
-    expansion: Constants.Expansion.CLASSIC,
-    locationType: Constants.LocationType.RAID,
-    location: Constants.ClassicRaids.NAXXRAMAS,
-    gender: Constants.Gender.MALE,
-    type: Constants.Type.UNDEAD,
-    position: 15
   }
 ]
 
@@ -430,6 +302,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SAND_REAVER,
     position: 1
   },
   {
@@ -440,6 +313,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.QIRAJI,
     position: 2
   },
   {
@@ -450,6 +324,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.ELEMENTAL,
+    subType: Constants.SubType.OBISIDIAN_DESTROYER,
     position: 3
   },
   {
@@ -460,6 +335,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SILITHID_COLOSSUS,
     position: 4
   },
   {
@@ -470,6 +346,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SILITHID_WASP,
     position: 5
   },
   {
@@ -480,6 +357,7 @@ const RuinsOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
     gender: Constants.Gender.MALE,
     type: Constants.Type.GIANT,
+    subType: Constants.SubType.HORUSATH,
     position: 6
   }
 ]
@@ -493,6 +371,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.QIRAJI,
     position: 1
   },
   {
@@ -503,6 +382,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SILITHID_COLOSSUS,
     position: 2
   },
   {
@@ -513,6 +393,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.QIRAJI,
     position: 3
   },
   {
@@ -523,6 +404,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SAND_REAVER,
     position: 4
   },
   {
@@ -533,6 +415,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.ABERRATION,
+    subType: Constants.SubType.OOZE,
     position: 5
   },
   {
@@ -543,6 +426,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.FEMALE,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SILITHID_WASP,
     position: 6
   },
   {
@@ -553,6 +437,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.MALE,
     type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.QIRAJI,
     position: 7
   },
   {
@@ -563,6 +448,7 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.MALE,
     type: Constants.Type.BEAST,
+    subType: Constants.SubType.SAND_WORM,
     position: 8
   },
   {
@@ -573,7 +459,176 @@ const TempleOfAhnQirajBosses: Boss[] = [
     location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
     gender: Constants.Gender.AGENDER,
     type: Constants.Type.ABERRATION,
+    subType: Constants.SubType.OLD_GOD,
     position: 9
+  }
+]
+
+const NaxxramasBosses: Boss[] = [
+  {
+    name: "Anub'Rekhan",
+    imageUrl: bossImageUrl('15931'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.CRYPT_LORD,
+    position: 1
+  },
+  {
+    name: 'Grand Widow Faerlina',
+    imageUrl: bossImageUrl('15940'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    subType: Constants.SubType.HUMAN,
+    position: 2
+  },
+  {
+    name: 'Maexxna',
+    imageUrl: bossImageUrl('15928'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.BEAST,
+    subType: Constants.SubType.GIANT_SPIDER,
+    position: 3
+  },
+  {
+    name: 'Noth the Plaguebringer',
+    imageUrl: bossImageUrl('16590'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.HUMAN,
+    position: 4
+  },
+  {
+    name: 'Heigan the Unclean',
+    imageUrl: bossImageUrl('16309'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.HUMAN,
+    position: 5
+  },
+  {
+    name: 'Loatheb',
+    imageUrl: bossImageUrl('16110'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.FUNGAL_MONSTER,
+    position: 6
+  },
+  {
+    name: 'Instructor Razuvious',
+    imageUrl: bossImageUrl('16582'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.HUMAN,
+    position: 7
+  },
+  {
+    name: 'Gothik the Harvester',
+    imageUrl: bossImageUrl('16279'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.HUMAN,
+    position: 8
+  },
+  {
+    name: 'The Four Horsemen',
+    imageUrl: bossImageUrl('16139'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MANY,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.HUMAN,
+    position: 9
+  },
+  {
+    name: 'Patchwerk',
+    imageUrl: bossImageUrl('16174'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.ABOMINATION,
+    position: 10
+  },
+  {
+    name: 'Grobbulus',
+    imageUrl: bossImageUrl('16035'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.FLESH_GIANT,
+    position: 11
+  },
+  {
+    name: 'Gluth',
+    imageUrl: bossImageUrl('16064'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.PLAGUE_DOG,
+    position: 12
+  },
+  {
+    name: 'Thaddius',
+    imageUrl: bossImageUrl('16137'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.FLESH_TITAN,
+    position: 13
+  },
+  {
+    name: 'Sapphiron',
+    imageUrl: bossImageUrl('16033'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.FROST_WYRM,
+    position: 14
+  },
+  {
+    name: "Kel'thuzard",
+    imageUrl: bossImageUrl('15945'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    subType: Constants.SubType.LICH,
+    position: 15
   }
 ]
 
