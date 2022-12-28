@@ -1,4 +1,4 @@
-# Welcome to Worldle of Warcraft!
+# Welcome to Wordle of Warcraft!
 
 This repository contains a wordle-like game based on World of Warcraft characters.
 
