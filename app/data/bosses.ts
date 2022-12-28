@@ -122,4 +122,91 @@ const OnyxiasLairBosses: Boss[] = [
   }
 ]
 
-export const ClassicBosses: Boss[] = [...MoltenCoreBosses, ...OnyxiasLairBosses]
+const BlackwingLairBosses: Boss[] = [
+  {
+    name: 'Razorgore the Untamed',
+    imageUrl: bossImageUrl('10115'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.DRAGONKIN,
+    position: 1
+  },
+  {
+    name: 'Vaelastrasz the Corrupt',
+    imageUrl: bossImageUrl('13992'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.DRAGONKIN,
+    position: 2
+  },
+  {
+    name: 'Broodlord Lashlayer',
+    imageUrl: bossImageUrl('14308'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.DRAGONKIN,
+    position: 3
+  },
+  {
+    name: 'Firemaw',
+    imageUrl: bossImageUrl('6377'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.DRAGONKIN,
+    position: 4
+  },
+  {
+    name: 'Ebonroc',
+    imageUrl: bossImageUrl('6377'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.DRAGONKIN,
+    position: 5
+  },
+  {
+    name: 'Flamegor',
+    imageUrl: bossImageUrl('6377'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.DRAGONKIN,
+    position: 6
+  },
+  {
+    name: 'Chromaggus',
+    imageUrl: bossImageUrl('14367'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 7
+  },
+  {
+    name: 'Nefarian',
+    imageUrl: bossImageUrl('11380'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.BLACKWING_LAIR,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.DRAGONKIN,
+    position: 8
+  }
+]
+
+export const ClassicBosses: Boss[] = [
+  ...MoltenCoreBosses,
+  ...OnyxiasLairBosses,
+  ...BlackwingLairBosses
+]
