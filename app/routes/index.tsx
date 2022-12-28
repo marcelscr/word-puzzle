@@ -1,19 +1,15 @@
+import { useEffect, useState } from 'react'
 import { ActionFunction, json, LoaderFunction } from '@remix-run/node'
-import { Form, useLoaderData } from '@remix-run/react'
-import moment from 'moment'
+import { Form, useLoaderData, useTransition } from '@remix-run/react'
 import { Autocomplete, TextField } from '@mui/material'
+import moment from 'moment'
 
 import Header from '~/components/header'
 import type { Boss } from '~/data/types'
 import BossesDB from '~/data/database'
 import { commitSession, getSession } from '~/lib/sessions'
 import { getGuesses, appendGuess } from '~/data/session'
-
-enum GameState {
-  GUESSING,
-  VICTORY,
-  DEFEAT
-}
+import { GameState, getGameState } from '~/data/game'
 
 type Data = {
   boss: Boss
@@ -22,15 +18,9 @@ type Data = {
   state: GameState
 }
 
-const getGameState = (boss: Boss, guesses: Boss[]) => {
-  if (guesses.map(boss => boss.name).includes(boss.name))
-    return GameState.VICTORY
-  if (guesses.length >= 5) return GameState.DEFEAT
-  return GameState.GUESSING
-}
-
 export const loader: LoaderFunction = async ({ request }) => {
   const session = await getSession(request.headers.get('Cookie'))
+
   const dailyBoss = BossesDB.getDailyBoss()
   const guesses = getGuesses(session)
 
@@ -54,14 +44,10 @@ export const action: ActionFunction = async ({ request }) => {
   const session = await getSession(request.headers.get('Cookie'))
 
   const formData = await request.formData()
-  const guess = formData.get('guess')
-  const boss = BossesDB.getByName(guess as string)
+  const bossName = formData.get('guess') as string
+  const guessedBoss = BossesDB.getByName(bossName)
 
-  if (boss) {
-    appendGuess(session, boss)
-  } else {
-    // Error
-  }
+  if (guessedBoss) appendGuess(session, guessedBoss)
 
   return json(
     {},
@@ -72,52 +58,85 @@ export const action: ActionFunction = async ({ request }) => {
 }
 
 export default function Index() {
+  // Loeader
   const data = useLoaderData<Data>()
+  const transition = useTransition()
+
+  // Form
+  const [value, setValue] = useState<string | null>(null)
+  const [inputValue, setInputValue] = useState('')
+
+  useEffect(() => {
+    // Clear the guess field after submitting an answer
+    if (transition.state === 'submitting') {
+      setValue(null)
+      setInputValue('')
+    }
+  }, [transition])
 
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center p-8 space-y-16">
-        <section>
+      <main className="flex flex-col items-center p-8 space-y-12 mt-6">
+        <p className="text-md">Can you find out today's boss?</p>
+        <div className="border border-white rounded">
           <img
             src={data.boss.imageUrl}
             alt="boss"
-            className="max-h-[400px] blur-md"
+            className="max-h-[300px] blur-md"
           />
-        </section>
+        </div>
 
         {data.state === GameState.GUESSING && (
-          <section className="text-center">
-            <Form method="post" className="w-[500px]">
-              <Autocomplete
-                id="boss-complete"
-                options={data.options.map(boss => boss.name)}
-                renderInput={params => (
+          <Form method="post" className="w-[400px]">
+            <Autocomplete
+              options={data.options.map(boss => boss.name)}
+              value={value}
+              onChange={(_, newValue) => setValue(newValue)}
+              inputValue={inputValue}
+              onInputChange={(_, newValue) => setInputValue(newValue)}
+              renderInput={params => {
+                return (
                   <TextField
                     {...params}
-                    label="Boss guess:"
+                    label={`Guess ${data.guesses.length + 1}/5`}
                     name="guess"
                     id="guess"
                   />
-                )}
-              />
-            </Form>
-          </section>
+                )
+              }}
+            />
+          </Form>
         )}
 
         {data.guesses.length > 0 && (
           <section className="text-center">
-            <p>Guesses until now:</p>
+            <p>Guesses:</p>
             <ul>
-              {data.guesses.map(boss => (
-                <li>{boss.name}</li>
+              {data.guesses.map((boss, index) => (
+                <li key={index}>{boss.name}</li>
               ))}
             </ul>
           </section>
         )}
 
-        {data.state === GameState.VICTORY && <p>Victory!</p>}
-        {data.state === GameState.DEFEAT && <p>Defeat!</p>}
+        {data.state === GameState.VICTORY && (
+          <div className="text-center">
+            <p>Victory!</p>
+            <p>
+              You have won.... But the huntress... is nothing without the hunt.
+              You... are nothing... without me!
+            </p>
+            <p>Come back tomorrow for another challenge</p>
+          </div>
+        )}
+        {data.state === GameState.DEFEAT && (
+          <div className="text-center">
+            <p>Defeat!</p>
+            <p>You are not prepared!</p>
+            <p>Come back tomorrow for another challenge</p>
+          </div>
+        )}
       </main>
     </>
   )

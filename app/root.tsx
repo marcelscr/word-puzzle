@@ -7,6 +7,7 @@ import {
   ScrollRestoration
 } from '@remix-run/react'
 import type { MetaFunction, LinksFunction } from '@remix-run/node'
+import { createTheme, ThemeProvider } from '@mui/material'
 
 import tailwindUrl from './styles/tailwind.css'
 
@@ -28,14 +29,29 @@ export const meta: MetaFunction = () => ({
 })
 
 export default function App() {
+  // Material UI theme
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        main: '#90caf9'
+      },
+      secondary: {
+        main: '#ce93d8'
+      }
+    }
+  })
+
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+      <body className="bg-[#181818] text-white font-mono">
+        <ThemeProvider theme={darkTheme}>
+          <Outlet />
+        </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
