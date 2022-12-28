@@ -34,5 +34,6 @@ export type Boss = {
   location: Location
   gender: Constants.Gender
   type: Constants.Type
+  subType: Constants.SubType
   position: number
 }
