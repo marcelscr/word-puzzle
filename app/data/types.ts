@@ -37,3 +37,13 @@ export type Boss = {
   subType: Constants.SubType
   position: number
 }
+
+export type BossComparison = {
+  guessedBoss: Boss
+  expansion: boolean
+  locationType: boolean
+  location: boolean
+  gender: boolean
+  type: boolean
+  position: Constants.NumberCompareEnum
+}

@@ -5,16 +5,17 @@ import { Autocomplete, TextField } from '@mui/material'
 import moment from 'moment'
 
 import Header from '~/components/header'
-import type { Boss } from '~/data/types'
+import Guess from '~/components/guess'
+import type { Boss, BossComparison } from '~/data/types'
 import BossesDB from '~/data/database'
 import { commitSession, getSession } from '~/lib/sessions'
 import { getGuesses, appendGuess } from '~/data/session'
-import { GameState, getGameState } from '~/data/game'
+import { GameState, getGameState, compareGuesses } from '~/data/game'
 
 type Data = {
   boss: Boss
   options: Boss[]
-  guesses: Boss[]
+  guesses: BossComparison[]
   state: GameState
 }
 
@@ -28,7 +29,7 @@ export const loader: LoaderFunction = async ({ request }) => {
   const data: Data = {
     boss,
     options,
-    guesses,
+    guesses: compareGuesses(boss, guesses),
     state: getGameState(boss, guesses)
   }
 
@@ -114,17 +115,6 @@ export default function Index() {
           </Form>
         )}
 
-        {data.guesses.length > 0 && (
-          <section className="text-center">
-            <p>Guesses:</p>
-            <ul>
-              {data.guesses.map((boss, index) => (
-                <li key={index}>{boss.name}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-
         {data.state === GameState.VICTORY && (
           <div className="text-center">
             <p>Victory!</p>
@@ -139,10 +129,21 @@ export default function Index() {
           <div className="text-center">
             <p>Defeat! You are not prepared!</p>
             <p>
-              Today's boss was: {data.boss.name} from {data.boss.location}
+              Today's boss was:
+              <br />
+              <b>{data.boss.name}</b> from <b>{data.boss.location}</b>
             </p>
-            <p>Come back tomorrow for another challenge</p>
+            <p>Come back tomorrow for another challenge!</p>
           </div>
+        )}
+
+        {data.guesses.length > 0 && (
+          <section className="text-center space-y-2">
+            <p>Guesses: </p>
+            {data.guesses.map((guess, index) => (
+              <Guess comparison={guess} key={index} />
+            ))}
+          </section>
         )}
       </main>
     </>

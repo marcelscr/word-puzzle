@@ -1,5 +1,11 @@
 // Expansion
 
+export enum NumberCompareEnum {
+  LOWER,
+  EQUAL,
+  HIGHER
+}
+
 export enum Expansion {
   CLASSIC = 'Classic',
   BURNING_CRUSADE = 'The Burning Crusade',
