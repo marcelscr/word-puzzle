@@ -268,9 +268,163 @@ const ZulGurubBosses: Boss[] = [
   }
 ]
 
+const NaxxramasBosses: Boss[] = [
+  {
+    name: "Anub'Rekhan",
+    imageUrl: bossImageUrl('15931'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 1
+  },
+  {
+    name: 'Grand Widow Faerlina',
+    imageUrl: bossImageUrl('15940'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    position: 2
+  },
+  {
+    name: 'Maexxna',
+    imageUrl: bossImageUrl('15928'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.BEAST,
+    position: 3
+  },
+  {
+    name: 'Noth the Plaguebringer',
+    imageUrl: bossImageUrl('16590'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 4
+  },
+  {
+    name: 'Heigan the Unclean',
+    imageUrl: bossImageUrl('16309'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 5
+  },
+  {
+    name: 'Loatheb',
+    imageUrl: bossImageUrl('16110'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 6
+  },
+  {
+    name: 'Instructor Razuvious',
+    imageUrl: bossImageUrl('16582'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 7
+  },
+  {
+    name: 'Gothik the Harvester',
+    imageUrl: bossImageUrl('16279'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 8
+  },
+  {
+    name: 'The Four Horsemen',
+    imageUrl: bossImageUrl('16139'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MANY,
+    type: Constants.Type.UNDEAD,
+    position: 9
+  },
+  {
+    name: 'Patchwerk',
+    imageUrl: bossImageUrl('16174'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 10
+  },
+  {
+    name: 'Grobbulus',
+    imageUrl: bossImageUrl('16035'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 11
+  },
+  {
+    name: 'Gluth',
+    imageUrl: bossImageUrl('16064'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 12
+  },
+  {
+    name: 'Thaddius',
+    imageUrl: bossImageUrl('16137'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.UNDEAD,
+    position: 13
+  },
+  {
+    name: 'Sapphiron',
+    imageUrl: bossImageUrl('16033'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 14
+  },
+  {
+    name: "Kel'thuzard",
+    imageUrl: bossImageUrl('15945'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.NAXXRAMAS,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.UNDEAD,
+    position: 15
+  }
+]
+
 export const ClassicBosses: Boss[] = [
   ...MoltenCoreBosses,
   ...OnyxiasLairBosses,
   ...BlackwingLairBosses,
-  ...ZulGurubBosses
+  ...ZulGurubBosses,
+  ...NaxxramasBosses
 ]

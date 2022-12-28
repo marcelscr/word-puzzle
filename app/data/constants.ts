@@ -26,7 +26,8 @@ export enum LocationType {
 export enum Gender {
   MALE = 'MALE',
   FEMALE = 'FEMALE',
-  AGENDER = 'AGENDER'
+  AGENDER = 'AGENDER',
+  MANY = 'MANY'
 }
 
 // Type
@@ -38,7 +39,8 @@ export enum Type {
   DRAGONKIN = 'DRAGONKIN',
   ELEMENTAL = 'ELEMENTAL',
   GIANT = 'GIANT',
-  HUMANOID = 'HUMANOID'
+  HUMANOID = 'HUMANOID',
+  UNDEAD = 'UNDEAD'
 }
 
 // Classic

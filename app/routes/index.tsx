@@ -67,6 +67,8 @@ export default function Index() {
   const [value, setValue] = useState<string | null>(null)
   const [inputValue, setInputValue] = useState('')
 
+  const isGuessing = data.state === GameState.GUESSING
+
   useEffect(() => {
     // Clear the guess field after submitting an answer
     if (transition.state === 'submitting') {
@@ -84,11 +86,11 @@ export default function Index() {
           <img
             src={data.boss.imageUrl}
             alt="boss"
-            className="max-h-[300px] blur-md"
+            className={`max-h-[300px] ${isGuessing ? 'blur-md' : ''}`}
           />
         </div>
 
-        {data.state === GameState.GUESSING && (
+        {isGuessing && (
           <Form method="post" className="w-[400px]">
             <Autocomplete
               options={data.options.map(boss => boss.name)}
