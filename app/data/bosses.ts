@@ -109,4 +109,17 @@ const MoltenCoreBosses: Boss[] = [
   }
 ]
 
-export const ClassicBosses: Boss[] = [...MoltenCoreBosses]
+const OnyxiasLairBosses: Boss[] = [
+  {
+    name: 'Onyxia (Classic)',
+    imageUrl: bossImageUrl('8570'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ONYXIAS_LAIR,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.DRAGONKIN,
+    position: 1
+  }
+]
+
+export const ClassicBosses: Boss[] = [...MoltenCoreBosses, ...OnyxiasLairBosses]
