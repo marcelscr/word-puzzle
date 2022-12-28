@@ -135,8 +135,10 @@ export default function Index() {
         )}
         {data.state === GameState.DEFEAT && (
           <div className="text-center">
-            <p>Defeat!</p>
-            <p>You are not prepared!</p>
+            <p>Defeat! You are not prepared!</p>
+            <p>
+              Today's boss was: {data.boss.name} from {data.boss.location}
+            </p>
             <p>Come back tomorrow for another challenge</p>
           </div>
         )}

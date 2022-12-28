@@ -83,13 +83,13 @@ export enum SubType {
 // Classic
 
 export enum ClassicRaids {
-  MOLTEN_CORE = 'MOLTEN_CORE',
-  ONYXIAS_LAIR = 'ONYXIAS_LAIR',
-  BLACKWING_LAIR = 'BLACKWING_LAIR',
-  ZUL_GURUB = 'ZUL_GURUB',
-  TEMPLE_OF_AHN_QIRAJ = 'TEMPLE_OF_AHN_QIRAJ',
-  RUINS_OF_AHN_QIRAJ = 'RUINS_OF_AHN_QIRAJ',
-  NAXXRAMAS = 'NAXXRAMAS'
+  MOLTEN_CORE = 'Molten Core',
+  ONYXIAS_LAIR = "Onyxias's Lair (Classic)",
+  BLACKWING_LAIR = 'Blackwing Lair',
+  ZUL_GURUB = "Zul'gurub",
+  TEMPLE_OF_AHN_QIRAJ = "Temple of Ahn'qiraj",
+  RUINS_OF_AHN_QIRAJ = "Ruins of Ahn'qiraj",
+  NAXXRAMAS = 'Naxxramas (Classic)'
 }
 
 export enum ClassicDungeons {
