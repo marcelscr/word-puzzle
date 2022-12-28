@@ -421,10 +421,77 @@ const NaxxramasBosses: Boss[] = [
   }
 ]
 
+const RuinsOfAhnQirajBosses: Boss[] = [
+  {
+    name: 'Kurinnaxx',
+    imageUrl: bossImageUrl('15742'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 1
+  },
+  {
+    name: 'General Rajaxx',
+    imageUrl: bossImageUrl('15376'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.HUMANOID,
+    position: 2
+  },
+  {
+    name: 'Moam',
+    imageUrl: bossImageUrl('15392'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.ELEMENTAL,
+    position: 3
+  },
+  {
+    name: 'Buru the Gorger',
+    imageUrl: bossImageUrl('15654'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 4
+  },
+  {
+    name: 'Ayamiss the Hunter',
+    imageUrl: bossImageUrl('15431'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 5
+  },
+  {
+    name: 'Ossirian the Unscarred',
+    imageUrl: bossImageUrl('15432'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.RUINS_OF_AHN_QIRAJ,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.GIANT,
+    position: 6
+  }
+]
+
+const TempleOfAhnQirajBosses: Boss[] = []
+
 export const ClassicBosses: Boss[] = [
   ...MoltenCoreBosses,
   ...OnyxiasLairBosses,
   ...BlackwingLairBosses,
   ...ZulGurubBosses,
+  ...RuinsOfAhnQirajBosses,
+  ...TempleOfAhnQirajBosses,
   ...NaxxramasBosses
 ]
