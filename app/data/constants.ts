@@ -1,52 +1,95 @@
 // Expansion
 
 export enum Expansion {
-  CLASSIC = 'CLASSIC',
-  BURNING_CRUSADE = 'BURNING_CRUSADE',
-  WRATH_OF_THE_LICH_KING = 'WRATH_OF_THE_LICH_KING',
-  CATACLYSM = 'CATACLYSM',
-  MISTS_OF_PANDARIA = 'MISTS_OF_PANDARIA',
-  WARLORDS_OF_DRAENOR = 'WARLORDS_OF_DRAENOR',
-  LEGION = 'LEGION',
-  BATTLE_FOR_AZEROTH = 'BATTLE_FOR_AZEROTH',
-  SHADOWLANDS = 'SHADOWLANDS',
-  DRAGONFLIGHT = 'DRAGONFLIGHT'
+  CLASSIC = 'Classic',
+  BURNING_CRUSADE = 'The Burning Crusade',
+  WRATH_OF_THE_LICH_KING = 'Wrath of the Lich King',
+  CATACLYSM = 'Cataclysm',
+  MISTS_OF_PANDARIA = 'Mists of Pandaria',
+  WARLORDS_OF_DRAENOR = 'Warlords of Draenor',
+  LEGION = 'Legion',
+  BATTLE_FOR_AZEROTH = 'Battle for Azeroth',
+  SHADOWLANDS = 'Shadowlands',
+  DRAGONFLIGHT = 'Dragonflight'
 }
 
 // LocationType
 
 export enum LocationType {
-  DUNGEON = 'DUNGEON',
-  RAID = 'RAID',
-  WORLD = 'WORLD'
+  DUNGEON = 'Dungeon',
+  RAID = 'Raid',
+  WORLD = 'World'
 }
 
 // Gender
 
 export enum Gender {
-  MALE = 'MALE',
-  FEMALE = 'FEMALE',
-  AGENDER = 'AGENDER'
+  MALE = 'Male',
+  FEMALE = 'Female',
+  AGENDER = 'Agender',
+  MANY = 'Many'
 }
 
 // Type
 
 export enum Type {
-  ABERRATION = 'ABERRATION',
-  DEMON = 'DEMON',
-  ELEMENTAL = 'ELEMENTAL'
+  ABERRATION = 'Aberration',
+  BEAST = 'Beast',
+  DEMON = 'Demon',
+  DRAGONKIN = 'Dragonkin',
+  ELEMENTAL = 'Elemental',
+  GIANT = 'Giant',
+  HUMANOID = 'Humanoid',
+  UNDEAD = 'Undead'
+}
+
+export enum SubType {
+  ABOMINATION = 'Abomination',
+  BLACK_DRAGON = 'Black dragon',
+  BLACK_DRAKE = 'Black drake',
+  BLACK_WYRM = 'Black wyrm',
+  CORE_HOUND = 'Core hound',
+  CRYPT_LORD = 'Crypt lord',
+  DRAGONSPAWN = 'Dragonspawn',
+  DRAKEADON = 'Drakeadon',
+  DRAKONID = 'Drakonid',
+  FIRE_ELEMENTAL = 'Fire elemental',
+  FLAMEWALKER = 'Flamewalker',
+  FLESH_GIANT = 'Flesh giant',
+  FLESH_TITAN = 'Flesh titan',
+  FROST_WYRM = 'Frost wyrm',
+  FUNGAL_MONSTER = 'Fungal monster',
+  GIANT_SPIDER = 'Giant spider',
+  HORUSATH = 'Horusath',
+  HUMAN = 'Human',
+  JUNGLE_TROLL = 'Jungle troll',
+  LAVA_ELEMENTAL = 'Lava elemental',
+  LICH = 'Lich',
+  LOA = 'Loa',
+  MOLTEN_GIANT = 'Molten giant',
+  OBISIDIAN_DESTROYER = 'Obsidian destroyer',
+  OLD_GOD = 'Old god',
+  OOZE = 'Ooze',
+  PLAGUE_DOG = 'Plague-dog',
+  QIRAJI = 'Qiraji',
+  RED_DRAGON = 'Red dragon',
+  SAND_REAVER = 'Sand reaver',
+  SAND_WORM = 'Sand worm',
+  SILITHID_COLOSSUS = 'Silithid colossus',
+  SILITHID_WASP = 'Silithid wasp',
+  ZANDALARI_TROLL = 'Zandalari troll'
 }
 
 // Classic
 
 export enum ClassicRaids {
-  MOLTEN_CORE = 'MOLTEN_CORE',
-  ONYXIAS_LAIR = 'ONYXIAS_LAIR',
-  BLACKWING_LAIR = 'BLACKWING_LAIR',
-  ZUL_GURUB = 'ZUL_GURUB',
-  TEMPLE_OF_AHN_QIRAJ = 'TEMPLE_OF_AHN_QIRAJ',
-  RUINS_OF_AHN_QIRAJ = 'RUINS_OF_AHN_QIRAJ',
-  NAXXRAMAS = 'NAXXRAMAS'
+  MOLTEN_CORE = 'Molten Core',
+  ONYXIAS_LAIR = "Onyxias's Lair (Classic)",
+  BLACKWING_LAIR = 'Blackwing Lair',
+  ZUL_GURUB = "Zul'gurub",
+  TEMPLE_OF_AHN_QIRAJ = "Temple of Ahn'qiraj",
+  RUINS_OF_AHN_QIRAJ = "Ruins of Ahn'qiraj",
+  NAXXRAMAS = 'Naxxramas (Classic)'
 }
 
 export enum ClassicDungeons {

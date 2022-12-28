@@ -21,14 +21,15 @@ type Data = {
 export const loader: LoaderFunction = async ({ request }) => {
   const session = await getSession(request.headers.get('Cookie'))
 
-  const dailyBoss = BossesDB.getDailyBoss()
+  const boss = BossesDB.getDailyBoss()
+  const options = BossesDB.getAll()
   const guesses = getGuesses(session)
 
   const data: Data = {
-    boss: BossesDB.getDailyBoss(),
-    options: BossesDB.getAll(),
-    guesses: getGuesses(session),
-    state: getGameState(dailyBoss, guesses)
+    boss,
+    options,
+    guesses,
+    state: getGameState(boss, guesses)
   }
 
   return json(data, {
@@ -66,6 +67,8 @@ export default function Index() {
   const [value, setValue] = useState<string | null>(null)
   const [inputValue, setInputValue] = useState('')
 
+  const isGuessing = data.state === GameState.GUESSING
+
   useEffect(() => {
     // Clear the guess field after submitting an answer
     if (transition.state === 'submitting') {
@@ -83,14 +86,14 @@ export default function Index() {
           <img
             src={data.boss.imageUrl}
             alt="boss"
-            className="max-h-[300px] blur-md"
+            className={`max-h-[300px] ${isGuessing ? 'blur-md' : ''}`}
           />
         </div>
 
-        {data.state === GameState.GUESSING && (
+        {isGuessing && (
           <Form method="post" className="w-[400px]">
             <Autocomplete
-              options={data.options.map(boss => boss.name)}
+              options={data.options.map(boss => boss.name).sort()}
               value={value}
               onChange={(_, newValue) => setValue(newValue)}
               inputValue={inputValue}
@@ -132,8 +135,10 @@ export default function Index() {
         )}
         {data.state === GameState.DEFEAT && (
           <div className="text-center">
-            <p>Defeat!</p>
-            <p>You are not prepared!</p>
+            <p>Defeat! You are not prepared!</p>
+            <p>
+              Today's boss was: {data.boss.name} from {data.boss.location}
+            </p>
             <p>Come back tomorrow for another challenge</p>
           </div>
         )}
