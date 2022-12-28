@@ -11,7 +11,7 @@ export class BossesDB {
   getDailyBoss(): Boss {
     // Select a fixed value based on the current date
     const rng = seedrandom(moment().format('YYYY-MM-DD'))
-    const randomIndex = Math.abs(rng.int32()) % BOSSES.length
+    const randomIndex = Math.ceil(rng.double() * BOSSES.length)
     return BOSSES[randomIndex]
   }
 

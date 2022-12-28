@@ -80,18 +80,20 @@ export default function Index() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center p-8 space-y-12 mt-6">
+      <main className="flex flex-col items-center p-8 space-y-12 mt-6 text-center">
         <p className="text-md">Can you find out today's boss?</p>
         <div className="border border-white rounded">
           <img
             src={data.boss.imageUrl}
             alt="boss"
-            className={`max-h-[300px] ${isGuessing ? 'blur-md' : ''}`}
+            className={`w-full max-w-[350px] max-h-[300px] ${
+              isGuessing ? 'blur-md' : ''
+            }`}
           />
         </div>
 
         {isGuessing && (
-          <Form method="post" className="w-[400px]">
+          <Form method="post" className="w-full max-w-[350px]">
             <Autocomplete
               options={data.options.map(boss => boss.name).sort()}
               value={value}
