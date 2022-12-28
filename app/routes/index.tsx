@@ -81,7 +81,7 @@ export default function Index() {
     <>
       <Header />
       <main className="flex flex-col items-center p-8 space-y-12 mt-6 text-center">
-        <p className="text-md">Can you find out today's boss?</p>
+        <p className="text-md">Can you find out today's raid boss?</p>
         <div className="border border-white rounded">
           <img
             src={data.boss.imageUrl}
