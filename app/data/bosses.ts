@@ -205,8 +205,72 @@ const BlackwingLairBosses: Boss[] = [
   }
 ]
 
+const ZulGurubBosses: Boss[] = [
+  {
+    name: 'High Priestess Jeklik',
+    imageUrl: bossImageUrl('15219'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    position: 1
+  },
+  {
+    name: 'High Priest Venoxis',
+    imageUrl: bossImageUrl('37788'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.HUMANOID,
+    position: 2
+  },
+  {
+    name: "High Priestess Mar'li (Classic)",
+    imageUrl: bossImageUrl('15220'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    position: 3
+  },
+  {
+    name: 'High Priest Thekal',
+    imageUrl: bossImageUrl('15216'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.HUMANOID,
+    position: 4
+  },
+  {
+    name: 'High Priestess Arlokk',
+    imageUrl: bossImageUrl('15218'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    position: 5
+  },
+  {
+    name: 'Hakkar the Soulflayer',
+    imageUrl: bossImageUrl('15295'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.ZUL_GURUB,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.BEAST,
+    position: 6
+  }
+]
+
 export const ClassicBosses: Boss[] = [
   ...MoltenCoreBosses,
   ...OnyxiasLairBosses,
-  ...BlackwingLairBosses
+  ...BlackwingLairBosses,
+  ...ZulGurubBosses
 ]
