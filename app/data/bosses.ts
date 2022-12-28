@@ -484,7 +484,98 @@ const RuinsOfAhnQirajBosses: Boss[] = [
   }
 ]
 
-const TempleOfAhnQirajBosses: Boss[] = []
+const TempleOfAhnQirajBosses: Boss[] = [
+  {
+    name: 'The Prophet Skeram',
+    imageUrl: bossImageUrl('15345'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.HUMANOID,
+    position: 1
+  },
+  {
+    name: 'Silithid Royalty',
+    imageUrl: bossImageUrl('15657'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 2
+  },
+  {
+    name: 'Battleguard Sartura',
+    imageUrl: bossImageUrl('15583'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.HUMANOID,
+    position: 3
+  },
+  {
+    name: 'Fankriss the Unyielding',
+    imageUrl: bossImageUrl('15743'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.BEAST,
+    position: 4
+  },
+  {
+    name: 'Viscidus',
+    imageUrl: bossImageUrl('15686'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.ABERRATION,
+    position: 5
+  },
+  {
+    name: 'Princess Huhuran',
+    imageUrl: bossImageUrl('15686'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.FEMALE,
+    type: Constants.Type.BEAST,
+    position: 6
+  },
+  {
+    name: 'Twin Emperors',
+    imageUrl: bossImageUrl('15778'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.HUMANOID,
+    position: 7
+  },
+  {
+    name: 'Ouro',
+    imageUrl: bossImageUrl('15509'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.MALE,
+    type: Constants.Type.BEAST,
+    position: 8
+  },
+  {
+    name: "C'thun",
+    imageUrl: bossImageUrl('15787'),
+    expansion: Constants.Expansion.CLASSIC,
+    locationType: Constants.LocationType.RAID,
+    location: Constants.ClassicRaids.TEMPLE_OF_AHN_QIRAJ,
+    gender: Constants.Gender.AGENDER,
+    type: Constants.Type.ABERRATION,
+    position: 9
+  }
+]
 
 export const ClassicBosses: Boss[] = [
   ...MoltenCoreBosses,

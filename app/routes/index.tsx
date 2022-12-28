@@ -93,7 +93,7 @@ export default function Index() {
         {isGuessing && (
           <Form method="post" className="w-[400px]">
             <Autocomplete
-              options={data.options.map(boss => boss.name)}
+              options={data.options.map(boss => boss.name).sort()}
               value={value}
               onChange={(_, newValue) => setValue(newValue)}
               inputValue={inputValue}
