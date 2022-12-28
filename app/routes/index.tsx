@@ -21,14 +21,15 @@ type Data = {
 export const loader: LoaderFunction = async ({ request }) => {
   const session = await getSession(request.headers.get('Cookie'))
 
-  const dailyBoss = BossesDB.getDailyBoss()
+  const boss = BossesDB.getDailyBoss()
+  const options = BossesDB.getAll()
   const guesses = getGuesses(session)
 
   const data: Data = {
-    boss: BossesDB.getDailyBoss(),
-    options: BossesDB.getAll(),
-    guesses: getGuesses(session),
-    state: getGameState(dailyBoss, guesses)
+    boss,
+    options,
+    guesses,
+    state: getGameState(boss, guesses)
   }
 
   return json(data, {

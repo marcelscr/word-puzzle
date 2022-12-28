@@ -33,8 +33,11 @@ export enum Gender {
 
 export enum Type {
   ABERRATION = 'ABERRATION',
+  BEAST = 'BEAST',
   DEMON = 'DEMON',
-  ELEMENTAL = 'ELEMENTAL'
+  ELEMENTAL = 'ELEMENTAL',
+  GIANT = 'GIANT',
+  HUMANOID = 'HUMANOID'
 }
 
 // Classic
