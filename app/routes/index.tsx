@@ -83,6 +83,8 @@ export default function Index() {
       <Header />
       <main className="flex flex-col items-center p-8 space-y-12 mt-6 text-center">
         <p className="text-md">Can you find out today's raid boss?</p>
+
+        {/* Show the boss image */}
         <div className="border border-white rounded">
           <img
             src={data.boss.imageUrl}
@@ -93,6 +95,7 @@ export default function Index() {
           />
         </div>
 
+        {/* Only show the textfield is the user is still guessing */}
         {isGuessing && (
           <Form method="post" className="w-full max-w-[350px]">
             <Autocomplete
@@ -115,28 +118,33 @@ export default function Index() {
           </Form>
         )}
 
+        {/* If the player won, show the victory message */}
         {data.state === GameState.VICTORY && (
           <div className="text-center">
             <p>Victory!</p>
-            <p>
-              You have won.... But the huntress... is nothing without the hunt.
-              You... are nothing... without me!
-            </p>
-            <p>Come back tomorrow for another challenge</p>
-          </div>
-        )}
-        {data.state === GameState.DEFEAT && (
-          <div className="text-center">
-            <p>Defeat! You are not prepared!</p>
-            <p>
+            <p className="mt-2">
               Today's boss was:
               <br />
               <b>{data.boss.name}</b> from <b>{data.boss.location}</b>
             </p>
-            <p>Come back tomorrow for another challenge!</p>
+            <p className="mt-2">Come back tomorrow for another challenge!</p>
           </div>
         )}
 
+        {/* If the player was defeated, show the lose message */}
+        {data.state === GameState.DEFEAT && (
+          <div className="text-center">
+            <p>Defeat! You are not prepared!</p>
+            <p className="mt-2">
+              Today's boss was:
+              <br />
+              <b>{data.boss.name}</b> from <b>{data.boss.location}</b>
+            </p>
+            <p className="mt-2">Come back tomorrow for another challenge!</p>
+          </div>
+        )}
+
+        {/* Show the guesses when there are guesses */}
         {data.guesses.length > 0 && (
           <section className="text-center space-y-2">
             <p>Guesses: </p>

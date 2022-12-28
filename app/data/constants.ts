@@ -90,12 +90,12 @@ export enum SubType {
 
 export enum ClassicRaids {
   MOLTEN_CORE = 'Molten Core',
-  ONYXIAS_LAIR = "Onyxias's Lair (Classic)",
+  ONYXIAS_LAIR = "Onyxias's Lair",
   BLACKWING_LAIR = 'Blackwing Lair',
   ZUL_GURUB = "Zul'gurub",
   TEMPLE_OF_AHN_QIRAJ = "Temple of Ahn'qiraj",
   RUINS_OF_AHN_QIRAJ = "Ruins of Ahn'qiraj",
-  NAXXRAMAS = 'Naxxramas (Classic)'
+  NAXXRAMAS = 'Naxxramas'
 }
 
 export enum ClassicDungeons {
