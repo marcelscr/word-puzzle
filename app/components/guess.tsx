@@ -57,38 +57,34 @@ const Guess = ({ comparison, index, className }: Props) => {
   }
 
   return (
-    <div className={cx('p-4 ml-[-90px]', className)}>
-      <div className="flex items-center justify-center">
-        <img className="w-20 h-20" src={imageUrl} alt="boss-guess" />
-
-        <div className="ml-2">
-          <p>
-            {index + 1}. {name}
-          </p>
-          <div className="flex flex-col space-y-2 justify-center mt-2 lg:space-x-2 lg:flex-row lg:space-y-0">
-            <Property
-              value={guessedBoss.expansion}
-              status={isCorrect(comparison.expansion)}
-            />
-            <Property
-              value={guessedBoss.location}
-              status={isCorrect(comparison.location)}
-            />
-            <Property
-              value={guessedBoss.type}
-              status={isCorrect(comparison.type)}
-            />
-            <Property
-              value={guessedBoss.gender}
-              status={isCorrect(comparison.gender)}
-            />
-            <Property
-              value={`${guessedBoss.position}${nth(guessedBoss.position)} boss${
-                PositionToSymbol[comparison.position]
-              }`}
-              status={PositionToStatus[comparison.position]}
-            />
-          </div>
+    <div className={cx('p-4', className)}>
+      <div className="flex flex-col items-center justify-center ">
+        <p>
+          {index + 1}. {name}
+        </p>
+        <div className="flex flex-col space-y-2 justify-center mt-2 lg:space-x-2 lg:flex-row lg:space-y-0">
+          <Property
+            value={guessedBoss.expansion}
+            status={isCorrect(comparison.expansion)}
+          />
+          <Property
+            value={guessedBoss.location}
+            status={isCorrect(comparison.location)}
+          />
+          <Property
+            value={guessedBoss.type}
+            status={isCorrect(comparison.type)}
+          />
+          <Property
+            value={guessedBoss.gender}
+            status={isCorrect(comparison.gender)}
+          />
+          <Property
+            value={`${guessedBoss.position}${nth(guessedBoss.position)} boss${
+              PositionToSymbol[comparison.position]
+            }`}
+            status={PositionToStatus[comparison.position]}
+          />
         </div>
       </div>
     </div>
