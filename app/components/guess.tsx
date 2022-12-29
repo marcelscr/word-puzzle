@@ -39,7 +39,7 @@ type Props = {
 
 const Guess = ({ comparison, index, className }: Props) => {
   const { guessedBoss } = comparison
-  const { name, imageUrl } = guessedBoss
+  const { name } = guessedBoss
 
   const isCorrect = (correct: boolean) =>
     correct ? PropertyStatus.CORRECT : PropertyStatus.WRONG
