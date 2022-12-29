@@ -1,5 +1,4 @@
 import cx from 'classnames'
-import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid'
 import { BossComparison } from '~/data/types'
 import { NumberCompareEnum } from '~/data/constants'
 
@@ -18,25 +17,27 @@ type PropertyProps = {
 const Property = ({ value, status }: PropertyProps) => {
   return (
     <div
-      className={cx('flex items-center justify-center border rounded p-2', {
-        'border-green-500 bg-green-100 text-black':
-          status === PropertyStatus.CORRECT,
-        'border-red-500 bg-red-100 text-black':
-          status !== PropertyStatus.CORRECT
-      })}>
+      className={cx(
+        'flex items-center justify-center border rounded p-2 text-sm',
+        {
+          'border-green-500 bg-green-100 text-black':
+            status === PropertyStatus.CORRECT,
+          'border-red-500 bg-red-100 text-black':
+            status !== PropertyStatus.CORRECT
+        }
+      )}>
       {value}
-      {status === PropertyStatus.HIGHER && <ArrowUpIcon className="w-5 h-5" />}
-      {status === PropertyStatus.LOWER && <ArrowDownIcon className="w-5 h-5" />}
     </div>
   )
 }
 
 type Props = {
   comparison: BossComparison
+  index: number
   className?: string
 }
 
-const Guess = ({ comparison, className }: Props) => {
+const Guess = ({ comparison, index, className }: Props) => {
   const { guessedBoss } = comparison
   const { name, imageUrl } = guessedBoss
 
@@ -48,37 +49,53 @@ const Guess = ({ comparison, className }: Props) => {
     [NumberCompareEnum.HIGHER]: PropertyStatus.HIGHER,
     [NumberCompareEnum.LOWER]: PropertyStatus.LOWER
   }
+
+  const PositionToSymbol = {
+    [NumberCompareEnum.EQUAL]: '',
+    [NumberCompareEnum.HIGHER]: '+',
+    [NumberCompareEnum.LOWER]: '-'
+  }
+
   return (
-    <div className={cx('p-4 border rounded border-white', className)}>
+    <div className={cx('p-4 ml-[-90px]', className)}>
       <div className="flex items-center justify-center">
         <img className="w-20 h-20" src={imageUrl} alt="boss-guess" />
-        <p>{name}</p>
-      </div>
 
-      <div className="flex flex-col space-y-2 justify-center mt-2 lg:space-x-2 lg:flex-row lg:space-y-0">
-        <Property
-          value={guessedBoss.expansion}
-          status={isCorrect(comparison.expansion)}
-        />
-        <Property
-          value={guessedBoss.location}
-          status={isCorrect(comparison.location)}
-        />
-        <Property
-          value={guessedBoss.type}
-          status={isCorrect(comparison.type)}
-        />
-        <Property
-          value={guessedBoss.gender}
-          status={isCorrect(comparison.gender)}
-        />
-        <Property
-          value={`Raid position: ${guessedBoss.position.toString()}`}
-          status={PositionToStatus[comparison.position]}
-        />
+        <div className="ml-2">
+          <p>
+            {index + 1}. {name}
+          </p>
+          <div className="flex flex-col space-y-2 justify-center mt-2 lg:space-x-2 lg:flex-row lg:space-y-0">
+            <Property
+              value={guessedBoss.expansion}
+              status={isCorrect(comparison.expansion)}
+            />
+            <Property
+              value={guessedBoss.location}
+              status={isCorrect(comparison.location)}
+            />
+            <Property
+              value={guessedBoss.type}
+              status={isCorrect(comparison.type)}
+            />
+            <Property
+              value={guessedBoss.gender}
+              status={isCorrect(comparison.gender)}
+            />
+            <Property
+              value={`${guessedBoss.position}${nth(guessedBoss.position)} boss${
+                PositionToSymbol[comparison.position]
+              }`}
+              status={PositionToStatus[comparison.position]}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+const nth = (n: number) =>
+  ['st', 'nd', 'rd'][((((n + 90) % 100) - 10) % 10) - 1] || 'th'
 
 export default Guess
