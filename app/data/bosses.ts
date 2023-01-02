@@ -620,7 +620,7 @@ const NaxxramasBosses: Boss[] = [
     position: 14
   },
   {
-    name: "Kel'thuzard",
+    name: "Kel'thuzad",
     imageUrl: bossImageUrl('15945'),
     expansion: Constants.Expansion.CLASSIC,
     locationType: Constants.LocationType.RAID,

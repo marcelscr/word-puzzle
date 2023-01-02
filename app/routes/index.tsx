@@ -5,16 +5,18 @@ import { Autocomplete, TextField } from '@mui/material'
 import moment from 'moment'
 
 import Header from '~/components/header'
-import type { Boss } from '~/data/types'
+import Guess from '~/components/guess'
+import Empty from '~/components/empty'
+import type { Boss, BossComparison } from '~/data/types'
 import BossesDB from '~/data/database'
 import { commitSession, getSession } from '~/lib/sessions'
 import { getGuesses, appendGuess } from '~/data/session'
-import { GameState, getGameState } from '~/data/game'
+import { GameState, getGameState, compareGuesses } from '~/data/game'
 
 type Data = {
   boss: Boss
   options: Boss[]
-  guesses: Boss[]
+  guesses: BossComparison[]
   state: GameState
 }
 
@@ -28,7 +30,7 @@ export const loader: LoaderFunction = async ({ request }) => {
   const data: Data = {
     boss,
     options,
-    guesses,
+    guesses: compareGuesses(boss, guesses),
     state: getGameState(boss, guesses)
   }
 
@@ -80,70 +82,86 @@ export default function Index() {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center p-8 space-y-12 mt-6 text-center">
-        <p className="text-md">Can you find out today's raid boss?</p>
-        <div className="border border-white rounded">
-          <img
-            src={data.boss.imageUrl}
-            alt="boss"
-            className={`w-full max-w-[350px] max-h-[300px] ${
-              isGuessing ? 'blur-md' : ''
-            }`}
-          />
-        </div>
+      <main className="mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="flex flex-col items-center p-8 space-y-12 text-center">
+            <p className="text-md">Can you find out today's raid boss?</p>
 
-        {isGuessing && (
-          <Form method="post" className="w-full max-w-[350px]">
-            <Autocomplete
-              options={data.options.map(boss => boss.name).sort()}
-              value={value}
-              onChange={(_, newValue) => setValue(newValue)}
-              inputValue={inputValue}
-              onInputChange={(_, newValue) => setInputValue(newValue)}
-              renderInput={params => {
-                return (
-                  <TextField
-                    {...params}
-                    label={`Guess ${data.guesses.length + 1}/5`}
-                    name="guess"
-                    id="guess"
-                  />
-                )
-              }}
-            />
-          </Form>
-        )}
+            {/* Show the boss image */}
+            <div className="border border-white rounded">
+              <img
+                src={data.boss.imageUrl}
+                alt="boss"
+                className={`w-full max-w-[350px] max-h-[300px] ${
+                  isGuessing ? 'blur-md' : ''
+                }`}
+              />
+            </div>
 
-        {data.guesses.length > 0 && (
-          <section className="text-center">
-            <p>Guesses:</p>
-            <ul>
-              {data.guesses.map((boss, index) => (
-                <li key={index}>{boss.name}</li>
+            {/* Only show the textfield is the user is still guessing */}
+            {isGuessing && (
+              <Form method="post" className="w-full max-w-[350px]">
+                <Autocomplete
+                  options={data.options.map(boss => boss.name).sort()}
+                  value={value}
+                  onChange={(_, newValue) => setValue(newValue)}
+                  inputValue={inputValue}
+                  onInputChange={(_, newValue) => setInputValue(newValue)}
+                  renderInput={params => {
+                    return (
+                      <TextField
+                        {...params}
+                        label={`Guess ${data.guesses.length + 1}/5`}
+                        name="guess"
+                        id="guess"
+                      />
+                    )
+                  }}
+                />
+              </Form>
+            )}
+
+            {/* If the player won, show the victory message */}
+            {data.state === GameState.VICTORY && (
+              <div className="text-center">
+                <p>Victory!</p>
+                <p className="mt-2">
+                  Today's boss was:
+                  <br />
+                  <b>{data.boss.name}</b> from <b>{data.boss.location}</b>
+                </p>
+                <p className="mt-2">
+                  Come back tomorrow for another challenge!
+                </p>
+              </div>
+            )}
+
+            {/* If the player was defeated, show the lose message */}
+            {data.state === GameState.DEFEAT && (
+              <div className="text-center">
+                <p>Defeat! You are not prepared!</p>
+                <p className="mt-2">
+                  Today's boss was:
+                  <br />
+                  <b>{data.boss.name}</b> from <b>{data.boss.location}</b>
+                </p>
+                <p className="mt-2">
+                  Come back tomorrow for another challenge!
+                </p>
+              </div>
+            )}
+          </div>
+          <div className="flex flex-col items-center p-8 text-center">
+            {/* Show the guesses when there are guesses */}
+            <section className="text-center">
+              <p>Guesses: </p>
+              {data.guesses.map((guess, index) => (
+                <Guess comparison={guess} index={index} key={index} />
               ))}
-            </ul>
-          </section>
-        )}
-
-        {data.state === GameState.VICTORY && (
-          <div className="text-center">
-            <p>Victory!</p>
-            <p>
-              You have won.... But the huntress... is nothing without the hunt.
-              You... are nothing... without me!
-            </p>
-            <p>Come back tomorrow for another challenge</p>
+              {data.guesses.length === 0 && <Empty />}
+            </section>
           </div>
-        )}
-        {data.state === GameState.DEFEAT && (
-          <div className="text-center">
-            <p>Defeat! You are not prepared!</p>
-            <p>
-              Today's boss was: {data.boss.name} from {data.boss.location}
-            </p>
-            <p>Come back tomorrow for another challenge</p>
-          </div>
-        )}
+        </div>
       </main>
     </>
   )
